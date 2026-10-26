@@ -26,8 +26,17 @@
   "plot_visual_review": "passed",
   "execution_not_claimed": [
     "Rewritten Databricks job",
-    "Rewritten Databricks AutoML",
-    "Docker image build",
-    "Remote GitHub Actions"
-  ]
+    "Rewritten Databricks AutoML"
+  ],
+  "github_actions": {
+    "run_id": 40354789841,
+    "tested_commit": "b813c64e6a2858791a4a3251d31a65d0c2a02ef6",
+    "url": "https://github.com/Benvenuteo/customer-churn-databricks-mlflow/actions/runs/40354789841",
+    "conclusion": "success",
+    "unit_tests_passed": 24,
+    "native_mlflow_save_reload_registry_report_and_scoring": "passed",
+    "docker_image_build_and_both_model_tasks_and_scoring": "passed",
+    "wheel_build": "passed",
+    "scope": "Synthetic smoke data; analytical full-data results are from the separately recorded local study."
+  }
 }

@@ -141,7 +141,7 @@ docker compose --profile ui up tracking
 
 After a Docker run, open `http://localhost:5000`. For a native local run, use `mlflow ui --backend-store-uri sqlite:///outputs/provided-v1/mlflow.db`. MLflow uses an isolated SQLite store per local run; on Databricks it uses the configured shared tracking service. Artifact locations belong to the environment in which they were created; native Spark model exports are the portable handoff.
 
-Allow several GB of free disk space and at least 4 GB available RAM for the local process; more headroom helps. `SPARK_DRIVER_MEMORY` controls the Docker driver heap (default 2 GB). Training uses local Spark, not a claimed distributed production benchmark. The Docker files are supplied; this environment's verification used native Python/Java execution rather than a Docker daemon.
+Allow several GB of free disk space and at least 4 GB available RAM for the local process; more headroom helps. `SPARK_DRIVER_MEMORY` controls the Docker driver heap (default 2 GB). Training uses local Spark, not a claimed distributed production benchmark. The full-data study used native Python/Java execution; GitHub Actions additionally built the Docker image and completed both model tasks and batch scoring on synthetic data inside the container.
 
 ## Score raw records
 
@@ -172,6 +172,8 @@ python -m build --wheel
 
 Tests cover adverse records, missing predictors, schema order, stable stratification, ID exclusion, matched AutoML inputs, metric definitions, unknown categories and whole-pipeline serialization. Local smoke/full runs additionally exercise MLflow model logging, native load-back equality, registry aliases, reports and batch scoring. The GitHub Actions workflow runs tests, a native synthetic MLflow smoke run, wheel packaging and a separate Docker build/smoke run on each push and pull request. Synthetic CI results validate the execution path; the committed full-data study remains the source of analytical results.
 
+**Verified on GitHub Actions:** [24 tests passed; native and Docker pipeline checks succeeded](https://github.com/Benvenuteo/customer-churn-databricks-mlflow/actions/runs/40354789841). The tested code commit and verification scope are recorded in [verification.json](reports/verification.json).
+
 | Location | Purpose |
 | --- | --- |
 | `src/churn_study` | Data preparation, CV, metrics, MLflow, scoring and reports |
@@ -184,3 +186,5 @@ Tests cover adverse records, missing predictors, schema order, stable stratifica
 Main Python dependencies and transitive local requirements are pinned. Spark comes from the ML runtime on Databricks; do not install the `local` extra there. The package keeps cloud runtime dependencies compatible without replacing the platform Spark installation.
 
 To rerun the presentation notebook locally, install `requirements-notebooks.txt` and start `jupyter lab`. That lock is constrained to the development lock so shared notebook dependencies stay compatible. Local SQLAlchemy is pinned below 2.1 for the tested MLflow 3.5 tracking store.
+
+For a Polish project description and a short interview walkthrough, see [the portfolio notes](docs/PORTFOLIO_PL.md).
