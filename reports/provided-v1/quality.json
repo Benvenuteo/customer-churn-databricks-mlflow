@@ -1,0 +1,85 @@
+{
+  "sources": {
+    "development": {
+      "input_rows": 440833,
+      "valid_rows": 440832,
+      "invalid_rows": 1
+    },
+    "external": {
+      "input_rows": 64374,
+      "valid_rows": 64374,
+      "invalid_rows": 0
+    }
+  },
+  "dispositions": [
+    {
+      "source": "development",
+      "valid": false,
+      "primary_reason": "empty_record",
+      "count": 1
+    },
+    {
+      "source": "development",
+      "valid": true,
+      "primary_reason": null,
+      "count": 440832
+    },
+    {
+      "source": "external",
+      "valid": true,
+      "primary_reason": null,
+      "count": 64374
+    }
+  ],
+  "split_counts": [
+    {
+      "source": "development",
+      "split": "test",
+      "churn": 0.0,
+      "count": 28625
+    },
+    {
+      "source": "development",
+      "split": "test",
+      "churn": 1.0,
+      "count": 37500
+    },
+    {
+      "source": "development",
+      "split": "train",
+      "churn": 0.0,
+      "count": 133583
+    },
+    {
+      "source": "development",
+      "split": "train",
+      "churn": 1.0,
+      "count": 174999
+    },
+    {
+      "source": "development",
+      "split": "validate",
+      "churn": 0.0,
+      "count": 28625
+    },
+    {
+      "source": "development",
+      "split": "validate",
+      "churn": 1.0,
+      "count": 37500
+    },
+    {
+      "source": "external",
+      "split": "external",
+      "churn": 0.0,
+      "count": 33881
+    },
+    {
+      "source": "external",
+      "split": "external",
+      "churn": 1.0,
+      "count": 30493
+    }
+  ],
+  "reconciled": true
+}

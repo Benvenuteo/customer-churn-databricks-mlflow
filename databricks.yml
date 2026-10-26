@@ -1,0 +1,78 @@
+bundle:
+  name: customer-churn-spending
+
+artifacts:
+  package:
+    type: whl
+    build: python -m build --wheel
+    path: .
+
+variables:
+  cluster_id:
+    description: Existing compatible dedicated Databricks ML cluster ID
+  input_directory:
+    description: Existing authorized /Volumes/... directory containing the two source CSVs
+  output_directory:
+    description: Existing authorized /Volumes/... parent for new run directories
+  registry_prefix:
+    description: Existing catalog.schema.model_prefix for candidate model registration
+  experiment_path:
+    default: /Shared/customer-churn-spending
+  run_id:
+    default: customer-study-v1
+
+resources:
+  jobs:
+    customer_study:
+      name: Customer churn and spending study
+      max_concurrent_runs: 1
+      tasks:
+        - task_key: prepare
+          existing_cluster_id: ${var.cluster_id}
+          notebook_task:
+            notebook_path: ./databricks/01_prepare.py
+            base_parameters:
+              input_directory: ${var.input_directory}
+              output_directory: ${var.output_directory}
+              run_id: ${var.run_id}
+              experiment_path: ${var.experiment_path}
+              registry_prefix: ${var.registry_prefix}
+          libraries:
+            - whl: ./dist/*.whl
+        - task_key: classification
+          depends_on:
+            - task_key: prepare
+          existing_cluster_id: ${var.cluster_id}
+          notebook_task:
+            notebook_path: ./databricks/02_train.py
+            base_parameters:
+              run_directory: ${var.output_directory}/${var.run_id}
+              task: classification
+          libraries:
+            - whl: ./dist/*.whl
+        - task_key: regression
+          depends_on:
+            - task_key: classification
+          existing_cluster_id: ${var.cluster_id}
+          notebook_task:
+            notebook_path: ./databricks/02_train.py
+            base_parameters:
+              run_directory: ${var.output_directory}/${var.run_id}
+              task: regression
+          libraries:
+            - whl: ./dist/*.whl
+        - task_key: report
+          depends_on:
+            - task_key: regression
+          existing_cluster_id: ${var.cluster_id}
+          notebook_task:
+            notebook_path: ./databricks/03_report.py
+            base_parameters:
+              run_directory: ${var.output_directory}/${var.run_id}
+          libraries:
+            - whl: ./dist/*.whl
+
+targets:
+  dev:
+    default: true
+    mode: development

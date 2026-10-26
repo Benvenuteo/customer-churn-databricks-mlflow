@@ -1,0 +1,79 @@
+{
+  "run_id": "provided-v1",
+  "started_at": "2026-10-24T16:32:31.499365+00:00",
+  "settings": {
+    "output": "outputs/provided-v1",
+    "run_id": "provided-v1",
+    "master": "local[2]",
+    "partitions": 4,
+    "seed": 42,
+    "folds": 3,
+    "cv_fraction": 0.25,
+    "bootstrap_repeats": 200,
+    "tree_iterations": 20,
+    "experiment_name": "customer-churn-spending",
+    "table_format": "parquet",
+    "registry_prefix": "customer_study",
+    "data_kind": "provided"
+  },
+  "inputs": {
+    "development": {
+      "name": "customer_churn_dataset-training-master.csv",
+      "bytes": 23448754,
+      "sha256": "a41be7b96fb85110521bf03d1530879e9ca94b9f5de19866757f6d184300fff7"
+    },
+    "external": {
+      "name": "customer_churn_dataset-testing-master.csv",
+      "bytes": 3282220,
+      "sha256": "330af932f2dc1cae917f3bd0fb29395c4021319dd906189b7dc257d0ad58a617"
+    }
+  },
+  "environment": {
+    "python": "3.11.17",
+    "spark": "3.5.7",
+    "mlflow": "3.5.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "logical_cpu_count": 9,
+    "cgroup_memory_limit_bytes": 8589934592,
+    "java": "openjdk version \"17.0.20\" 2026-07-21"
+  },
+  "execution": {
+    "master": "local[2]",
+    "driver_memory": "2g",
+    "shuffle_partitions": "4"
+  },
+  "stages": {
+    "prepare": {
+      "status": "complete",
+      "seconds": 27.998951527000145,
+      "sources": {
+        "development": {
+          "input_rows": 440833,
+          "valid_rows": 440832,
+          "invalid_rows": 1
+        },
+        "external": {
+          "input_rows": 64374,
+          "valid_rows": 64374,
+          "invalid_rows": 0
+        }
+      }
+    },
+    "classification": {
+      "status": "complete",
+      "seconds": 81.69122277199995,
+      "mlflow_run_id": "3979bc4a5a4f4a22940e9c607eaa3fef"
+    },
+    "regression": {
+      "status": "complete",
+      "seconds": 39.034426392000114,
+      "mlflow_run_id": "ea7217458e3440a8ac709ae91c971cad"
+    },
+    "coefficient_diagnostics": {
+      "status": "complete",
+      "seconds": 16.848023926000224,
+      "used_for_selection": false
+    }
+  },
+  "export_note": "Local output path normalized; measured metrics and input identities unchanged"
+}

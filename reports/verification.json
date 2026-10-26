@@ -1,0 +1,33 @@
+{
+  "unit_tests": {
+    "passed": 24,
+    "failed": 0
+  },
+  "provided_data": {
+    "development_input_rows": 440833,
+    "development_valid_rows": 440832,
+    "external_rows": 64374,
+    "full_training_rows": 308582,
+    "cv_sample_rows": 77490,
+    "folds": 3
+  },
+  "mlflow_complete_pipeline_roundtrip": {
+    "classification": true,
+    "regression": true
+  },
+  "batch_scoring": {
+    "synthetic_rows": 150,
+    "relocated_models_feature_only_rows_per_task": 5,
+    "missing_numeric_and_unseen_category_checked": true
+  },
+  "presentation_notebook_executed_code_cells": 7,
+  "wheel_build": "passed",
+  "python_and_yaml_validation": "passed",
+  "plot_visual_review": "passed",
+  "execution_not_claimed": [
+    "Rewritten Databricks job",
+    "Rewritten Databricks AutoML",
+    "Docker image build",
+    "Remote GitHub Actions"
+  ]
+}

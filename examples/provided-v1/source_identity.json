@@ -1,0 +1,12 @@
+{
+  "development": {
+    "name": "customer_churn_dataset-training-master.csv",
+    "bytes": 23448754,
+    "sha256": "a41be7b96fb85110521bf03d1530879e9ca94b9f5de19866757f6d184300fff7"
+  },
+  "external": {
+    "name": "customer_churn_dataset-testing-master.csv",
+    "bytes": 3282220,
+    "sha256": "330af932f2dc1cae917f3bd0fb29395c4021319dd906189b7dc257d0ad58a617"
+  }
+}

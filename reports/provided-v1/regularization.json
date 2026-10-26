@@ -1,0 +1,560 @@
+{
+  "fit_population": "development train only",
+  "used_for_model_selection": false,
+  "units": "Spending units per one training SD of a transformed feature",
+  "interpretation": "Associations conditional on the linear specification; not causal effects",
+  "paths": [
+    {
+      "family": "ridge",
+      "reg_param": 0.001,
+      "zero_coefficients": 3,
+      "coefficients": [
+        {
+          "name": "age_imputed",
+          "raw": -0.7860575158220718,
+          "per_training_sd": -9.780023249948814
+        },
+        {
+          "name": "tenure_imputed",
+          "raw": 0.13452011875192835,
+          "per_training_sd": 2.3218519665949064
+        },
+        {
+          "name": "usage_frequency_imputed",
+          "raw": 0.36888540671242903,
+          "per_training_sd": 3.16567312914946
+        },
+        {
+          "name": "support_calls_imputed",
+          "raw": -13.505066284054292,
+          "per_training_sd": -41.46335124248635
+        },
+        {
+          "name": "payment_delay_imputed",
+          "raw": -2.145377314195868,
+          "per_training_sd": -17.70347969756412
+        },
+        {
+          "name": "last_interaction_imputed",
+          "raw": -1.0717709739629613,
+          "per_training_sd": -9.21671274191853
+        },
+        {
+          "name": "gender_encoded_Male",
+          "raw": 10.525289318683331,
+          "per_training_sd": 5.213605081073382
+        },
+        {
+          "name": "gender_encoded_Female",
+          "raw": -10.525287313911482,
+          "per_training_sd": -5.213604088028119
+        },
+        {
+          "name": "gender_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Standard",
+          "raw": 1.5730683288844305,
+          "per_training_sd": 0.7442962394364188
+        },
+        {
+          "name": "subscription_type_encoded_Premium",
+          "raw": 0.5844573913159063,
+          "per_training_sd": 0.2764091718008823
+        },
+        {
+          "name": "subscription_type_encoded_Basic",
+          "raw": -2.2049539288029645,
+          "per_training_sd": -1.0318621405233805
+        },
+        {
+          "name": "subscription_type_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Annual",
+          "raw": 16.47609249001902,
+          "per_training_sd": 8.07973233527442
+        },
+        {
+          "name": "contract_length_encoded_Quarterly",
+          "raw": 16.684717562577905,
+          "per_training_sd": 8.172907025646834
+        },
+        {
+          "name": "contract_length_encoded_Monthly",
+          "raw": -50.19637033707446,
+          "per_training_sd": -19.99620311970017
+        },
+        {
+          "name": "contract_length_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        }
+      ]
+    },
+    {
+      "family": "ridge",
+      "reg_param": 0.1,
+      "zero_coefficients": 3,
+      "coefficients": [
+        {
+          "name": "age_imputed",
+          "raw": -0.7859800233817035,
+          "per_training_sd": -9.779059099294132
+        },
+        {
+          "name": "tenure_imputed",
+          "raw": 0.13449877532462412,
+          "per_training_sd": 2.321483573531326
+        },
+        {
+          "name": "usage_frequency_imputed",
+          "raw": 0.368788146198149,
+          "per_training_sd": 3.1648384661593254
+        },
+        {
+          "name": "support_calls_imputed",
+          "raw": -13.500166152637107,
+          "per_training_sd": -41.44830682390952
+        },
+        {
+          "name": "payment_delay_imputed",
+          "raw": -2.144876566465798,
+          "per_training_sd": -17.699347567885003
+        },
+        {
+          "name": "last_interaction_imputed",
+          "raw": -1.0715105772657736,
+          "per_training_sd": -9.214473456086736
+        },
+        {
+          "name": "gender_encoded_Male",
+          "raw": 10.524751829485215,
+          "per_training_sd": 5.213338840751669
+        },
+        {
+          "name": "gender_encoded_Female",
+          "raw": -10.52475180918433,
+          "per_training_sd": -5.213338830695814
+        },
+        {
+          "name": "gender_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Standard",
+          "raw": 1.572730090776863,
+          "per_training_sd": 0.7441362022995227
+        },
+        {
+          "name": "subscription_type_encoded_Premium",
+          "raw": 0.5844528460664162,
+          "per_training_sd": 0.2764070222025269
+        },
+        {
+          "name": "subscription_type_encoded_Basic",
+          "raw": -2.204608722646418,
+          "per_training_sd": -1.0317005928561196
+        },
+        {
+          "name": "subscription_type_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Annual",
+          "raw": 16.473579904221953,
+          "per_training_sd": 8.078500185071208
+        },
+        {
+          "name": "contract_length_encoded_Quarterly",
+          "raw": 16.682120567734746,
+          "per_training_sd": 8.171634903579463
+        },
+        {
+          "name": "contract_length_encoded_Monthly",
+          "raw": -50.188640188841994,
+          "per_training_sd": -19.99312374138728
+        },
+        {
+          "name": "contract_length_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        }
+      ]
+    },
+    {
+      "family": "ridge",
+      "reg_param": 10.0,
+      "zero_coefficients": 3,
+      "coefficients": [
+        {
+          "name": "age_imputed",
+          "raw": -0.7777869775103603,
+          "per_training_sd": -9.677122310322865
+        },
+        {
+          "name": "tenure_imputed",
+          "raw": 0.13235861888713643,
+          "per_training_sd": 2.284543921088964
+        },
+        {
+          "name": "usage_frequency_imputed",
+          "raw": 0.3593023887785625,
+          "per_training_sd": 3.0834343042532284
+        },
+        {
+          "name": "support_calls_imputed",
+          "raw": -13.02963558549229,
+          "per_training_sd": -40.00368050623736
+        },
+        {
+          "name": "payment_delay_imputed",
+          "raw": -2.0957198171429523,
+          "per_training_sd": -17.293710057002013
+        },
+        {
+          "name": "last_interaction_imputed",
+          "raw": -1.0459149121748672,
+          "per_training_sd": -8.994363098265653
+        },
+        {
+          "name": "gender_encoded_Male",
+          "raw": 10.467090959976616,
+          "per_training_sd": 5.184777060343837
+        },
+        {
+          "name": "gender_encoded_Female",
+          "raw": -10.467090959758684,
+          "per_training_sd": -5.184777060235886
+        },
+        {
+          "name": "gender_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Standard",
+          "raw": 1.5396952483452178,
+          "per_training_sd": 0.7285057884511396
+        },
+        {
+          "name": "subscription_type_encoded_Premium",
+          "raw": 0.583693594088111,
+          "per_training_sd": 0.27604794690699674
+        },
+        {
+          "name": "subscription_type_encoded_Basic",
+          "raw": -2.170063865168335,
+          "per_training_sd": -1.015534481575617
+        },
+        {
+          "name": "subscription_type_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Annual",
+          "raw": 16.221714698950183,
+          "per_training_sd": 7.954987680853498
+        },
+        {
+          "name": "contract_length_encoded_Quarterly",
+          "raw": 16.42210402964627,
+          "per_training_sd": 8.044267389987622
+        },
+        {
+          "name": "contract_length_encoded_Monthly",
+          "raw": -49.41379995200228,
+          "per_training_sd": -19.68445873917456
+        },
+        {
+          "name": "contract_length_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        }
+      ]
+    },
+    {
+      "family": "lasso",
+      "reg_param": 0.001,
+      "zero_coefficients": 3,
+      "coefficients": [
+        {
+          "name": "age_imputed",
+          "raw": -0.7859932204116178,
+          "per_training_sd": -9.779223294988206
+        },
+        {
+          "name": "tenure_imputed",
+          "raw": 0.13446139114275876,
+          "per_training_sd": 2.320838312904225
+        },
+        {
+          "name": "usage_frequency_imputed",
+          "raw": 0.3687712423496856,
+          "per_training_sd": 3.164693401979811
+        },
+        {
+          "name": "support_calls_imputed",
+          "raw": -13.505018205916686,
+          "per_training_sd": -41.46320363264388
+        },
+        {
+          "name": "payment_delay_imputed",
+          "raw": -2.145310046652795,
+          "per_training_sd": -17.702924611251227
+        },
+        {
+          "name": "last_interaction_imputed",
+          "raw": -1.071657143136244,
+          "per_training_sd": -9.215733851785735
+        },
+        {
+          "name": "gender_encoded_Male",
+          "raw": 10.524239078869893,
+          "per_training_sd": 5.213084854458996
+        },
+        {
+          "name": "gender_encoded_Female",
+          "raw": -10.5242390787906,
+          "per_training_sd": -5.213084854419719
+        },
+        {
+          "name": "gender_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Standard",
+          "raw": 1.4908099656624891,
+          "per_training_sd": 0.705375749280912
+        },
+        {
+          "name": "subscription_type_encoded_Premium",
+          "raw": 0.5021687515155493,
+          "per_training_sd": 0.2374921607171031
+        },
+        {
+          "name": "subscription_type_encoded_Basic",
+          "raw": -2.295104185714169,
+          "per_training_sd": -1.0740501589894302
+        },
+        {
+          "name": "subscription_type_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Annual",
+          "raw": 16.33994919469428,
+          "per_training_sd": 8.012968848353447
+        },
+        {
+          "name": "contract_length_encoded_Quarterly",
+          "raw": 16.548571189366672,
+          "per_training_sd": 8.10621655600232
+        },
+        {
+          "name": "contract_length_encoded_Monthly",
+          "raw": -50.331397670963284,
+          "per_training_sd": -20.049992546645214
+        },
+        {
+          "name": "contract_length_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        }
+      ]
+    },
+    {
+      "family": "lasso",
+      "reg_param": 0.1,
+      "zero_coefficients": 5,
+      "coefficients": [
+        {
+          "name": "age_imputed",
+          "raw": -0.7799574809791816,
+          "per_training_sd": -9.704127426312331
+        },
+        {
+          "name": "tenure_imputed",
+          "raw": 0.12878182787617926,
+          "per_training_sd": 2.2228075851420344
+        },
+        {
+          "name": "usage_frequency_imputed",
+          "raw": 0.3574896728264065,
+          "per_training_sd": 3.0678780743886125
+        },
+        {
+          "name": "support_calls_imputed",
+          "raw": -13.491670152729595,
+          "per_training_sd": -41.42222234413639
+        },
+        {
+          "name": "payment_delay_imputed",
+          "raw": -2.137041482360917,
+          "per_training_sd": -17.6346930889448
+        },
+        {
+          "name": "last_interaction_imputed",
+          "raw": -1.0600863655164017,
+          "per_training_sd": -9.11623075260366
+        },
+        {
+          "name": "gender_encoded_Male",
+          "raw": 10.425925390974536,
+          "per_training_sd": 5.164386075049632
+        },
+        {
+          "name": "gender_encoded_Female",
+          "raw": -10.425925390833136,
+          "per_training_sd": -5.164386074979591
+        },
+        {
+          "name": "gender_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Standard",
+          "raw": 0.846127788573916,
+          "per_training_sd": 0.400344803562876
+        },
+        {
+          "name": "subscription_type_encoded_Premium",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Basic",
+          "raw": -2.6446810261795055,
+          "per_training_sd": -1.2376431947295417
+        },
+        {
+          "name": "subscription_type_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Annual",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Quarterly",
+          "raw": 0.06307403682125626,
+          "per_training_sd": 0.030896431823848287
+        },
+        {
+          "name": "contract_length_encoded_Monthly",
+          "raw": -66.59753972377948,
+          "per_training_sd": -26.529765452093223
+        },
+        {
+          "name": "contract_length_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        }
+      ]
+    },
+    {
+      "family": "lasso",
+      "reg_param": 10.0,
+      "zero_coefficients": 11,
+      "coefficients": [
+        {
+          "name": "age_imputed",
+          "raw": -0.166680875530428,
+          "per_training_sd": -2.0738213237546366
+        },
+        {
+          "name": "tenure_imputed",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "usage_frequency_imputed",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "support_calls_imputed",
+          "raw": -12.035322297589651,
+          "per_training_sd": -36.950932727423655
+        },
+        {
+          "name": "payment_delay_imputed",
+          "raw": -1.2882007586329902,
+          "per_training_sd": -10.630128241751203
+        },
+        {
+          "name": "last_interaction_imputed",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "gender_encoded_Male",
+          "raw": 0.6592585375048592,
+          "per_training_sd": 0.3265576419619322
+        },
+        {
+          "name": "gender_encoded_Female",
+          "raw": -0.659258537444024,
+          "per_training_sd": -0.32655764193179804
+        },
+        {
+          "name": "gender_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Standard",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Premium",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded_Basic",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "subscription_type_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Annual",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Quarterly",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        },
+        {
+          "name": "contract_length_encoded_Monthly",
+          "raw": -51.32138115543569,
+          "per_training_sd": -20.444361914544263
+        },
+        {
+          "name": "contract_length_encoded___unknown",
+          "raw": 0.0,
+          "per_training_sd": 0.0
+        }
+      ]
+    }
+  ]
+}

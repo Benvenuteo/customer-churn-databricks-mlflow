@@ -1,0 +1,1 @@
+The handoff ZIP contains native candidate pipelines and threshold metadata in provided-v1/. These illustrative models have the documented external-transfer limitations. Models are excluded from Git by default; reproduce them with the study CLI.

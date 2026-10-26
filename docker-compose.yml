@@ -1,0 +1,21 @@
+x-study: &study
+  build: .
+  working_dir: /app
+  volumes:
+    - ./data:/app/data
+    - ./outputs:/app/outputs
+    - ./examples:/app/examples:ro
+  environment:
+    PYSPARK_SUBMIT_ARGS: --driver-memory ${SPARK_DRIVER_MEMORY:-2g} pyspark-shell
+    OPENBLAS_NUM_THREADS: "1"
+    OMP_NUM_THREADS: "1"
+
+services:
+  study:
+    <<: *study
+  tracking:
+    <<: *study
+    profiles: ["ui"]
+    command: ["mlflow", "ui", "--backend-store-uri", "sqlite:////app/${STUDY_RUN_DIRECTORY:-outputs/provided-v1}/mlflow.db", "--host", "0.0.0.0", "--port", "5000"]
+    ports:
+      - "127.0.0.1:5000:5000"

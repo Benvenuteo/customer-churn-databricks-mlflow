@@ -1,0 +1,877 @@
+{
+  "source_summary": [
+    {
+      "rows": 440832,
+      "mean_customer_id": 225398.66795513936,
+      "mean_age": 39.37315349157956,
+      "mean_tenure": 31.25633574695122,
+      "mean_usage_frequency": 15.80749355763647,
+      "mean_support_calls": 3.6044366107723578,
+      "mean_payment_delay": 12.965721635452962,
+      "mean_total_spend": 631.6162227787354,
+      "mean_last_interaction": 14.480867995063878,
+      "mean_churn": 0.5671071972996515,
+      "id_churn_pearson": -0.8393651488368177,
+      "source": "development"
+    },
+    {
+      "rows": 64374,
+      "mean_customer_id": 32187.5,
+      "mean_age": 41.97098207350794,
+      "mean_tenure": 31.994827104110357,
+      "mean_usage_frequency": 15.080234256066113,
+      "mean_support_calls": 5.400689719451953,
+      "mean_payment_delay": 17.13395159536459,
+      "mean_total_spend": 541.0233790039457,
+      "mean_last_interaction": 15.498850467580079,
+      "mean_churn": 0.47368502811694163,
+      "id_churn_pearson": 0.5298315536981277,
+      "source": "external"
+    }
+  ],
+  "numeric_bins": [
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 15,
+      "count": 16292
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 20,
+      "count": 47744
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 25,
+      "count": 47990
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 30,
+      "count": 54703
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 35,
+      "count": 55259
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 40,
+      "count": 61951
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 45,
+      "count": 61712
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 50,
+      "count": 35267
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 55,
+      "count": 27273
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 60,
+      "count": 27181
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 65,
+      "count": 5460
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 15,
+      "count": 2553
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 20,
+      "count": 6442
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 25,
+      "count": 6552
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 30,
+      "count": 6547
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 35,
+      "count": 6701
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 40,
+      "count": 6452
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 45,
+      "count": 6509
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 50,
+      "count": 7005
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 55,
+      "count": 7058
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 60,
+      "count": 7081
+    },
+    {
+      "feature": "age",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 65,
+      "count": 1474
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 0,
+      "count": 26005
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 5,
+      "count": 37146
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 10,
+      "count": 35231
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 15,
+      "count": 33350
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 20,
+      "count": 33364
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 25,
+      "count": 37798
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 30,
+      "count": 38443
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 35,
+      "count": 38109
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 40,
+      "count": 38187
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 45,
+      "count": 38683
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 50,
+      "count": 38268
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 55,
+      "count": 38590
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 60,
+      "count": 7658
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 0,
+      "count": 3804
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 5,
+      "count": 4731
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 10,
+      "count": 4638
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 15,
+      "count": 4587
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 20,
+      "count": 4887
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 25,
+      "count": 5749
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 30,
+      "count": 5724
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 35,
+      "count": 5836
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 40,
+      "count": 5700
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 45,
+      "count": 5896
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 50,
+      "count": 5828
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 55,
+      "count": 5816
+    },
+    {
+      "feature": "tenure",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 60,
+      "count": 1178
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 0,
+      "count": 69875
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 1,
+      "count": 69476
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 2,
+      "count": 66571
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 3,
+      "count": 52729
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 4,
+      "count": 38750
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 5,
+      "count": 24918
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 6,
+      "count": 23554
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 7,
+      "count": 23870
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 8,
+      "count": 23559
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 9,
+      "count": 23630
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "development",
+      "lower_bound": 10,
+      "count": 23900
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 0,
+      "count": 4967
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 1,
+      "count": 4929
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 2,
+      "count": 4812
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 3,
+      "count": 4723
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 4,
+      "count": 5148
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 5,
+      "count": 6657
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 6,
+      "count": 6639
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 7,
+      "count": 6599
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 8,
+      "count": 6649
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 9,
+      "count": 6664
+    },
+    {
+      "feature": "support_calls",
+      "width": 1,
+      "source": "external",
+      "lower_bound": 10,
+      "count": 6587
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 0,
+      "count": 84710
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 5,
+      "count": 84486
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 10,
+      "count": 85607
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 15,
+      "count": 84824
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 20,
+      "count": 50947
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 25,
+      "count": 41668
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "development",
+      "lower_bound": 30,
+      "count": 8590
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 0,
+      "count": 7795
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 5,
+      "count": 7741
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 10,
+      "count": 8048
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 15,
+      "count": 10831
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 20,
+      "count": 13331
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 25,
+      "count": 13854
+    },
+    {
+      "feature": "payment_delay",
+      "width": 5,
+      "source": "external",
+      "lower_bound": 30,
+      "count": 2774
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 100,
+      "count": 28705
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 200,
+      "count": 29060
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 300,
+      "count": 28870
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 400,
+      "count": 29161
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 500,
+      "count": 65188
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 600,
+      "count": 64750
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 700,
+      "count": 65341
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 800,
+      "count": 64824
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 900,
+      "count": 64822
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "development",
+      "lower_bound": 1000,
+      "count": 111
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 100,
+      "count": 7545
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 200,
+      "count": 7543
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 300,
+      "count": 7329
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 400,
+      "count": 7461
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 500,
+      "count": 6849
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 600,
+      "count": 6838
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 700,
+      "count": 6871
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 800,
+      "count": 7012
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 900,
+      "count": 6891
+    },
+    {
+      "feature": "total_spend",
+      "width": 100,
+      "source": "external",
+      "lower_bound": 1000,
+      "count": 35
+    }
+  ],
+  "support_calls_ge6": [
+    {
+      "source": "development",
+      "rows": 118513,
+      "churn_rate": 1.0
+    },
+    {
+      "source": "external",
+      "rows": 33138,
+      "churn_rate": 0.6099040376606917
+    }
+  ],
+  "identity_overlap": {
+    "shared_id_values": 62995,
+    "identical_rows_for_shared_id": 0
+  },
+  "category_counts": [
+    {
+      "source": "development",
+      "feature": "gender",
+      "value": "Female",
+      "count": 190580
+    },
+    {
+      "source": "development",
+      "feature": "gender",
+      "value": "Male",
+      "count": 250252
+    },
+    {
+      "source": "external",
+      "feature": "gender",
+      "value": "Male",
+      "count": 30021
+    },
+    {
+      "source": "external",
+      "feature": "gender",
+      "value": "Female",
+      "count": 34353
+    },
+    {
+      "source": "development",
+      "feature": "subscription_type",
+      "value": "Premium",
+      "count": 148678
+    },
+    {
+      "source": "development",
+      "feature": "subscription_type",
+      "value": "Basic",
+      "count": 143026
+    },
+    {
+      "source": "development",
+      "feature": "subscription_type",
+      "value": "Standard",
+      "count": 149128
+    },
+    {
+      "source": "external",
+      "feature": "subscription_type",
+      "value": "Basic",
+      "count": 21451
+    },
+    {
+      "source": "external",
+      "feature": "subscription_type",
+      "value": "Standard",
+      "count": 21502
+    },
+    {
+      "source": "external",
+      "feature": "subscription_type",
+      "value": "Premium",
+      "count": 21421
+    },
+    {
+      "source": "development",
+      "feature": "contract_length",
+      "value": "Annual",
+      "count": 177198
+    },
+    {
+      "source": "development",
+      "feature": "contract_length",
+      "value": "Quarterly",
+      "count": 176530
+    },
+    {
+      "source": "development",
+      "feature": "contract_length",
+      "value": "Monthly",
+      "count": 87104
+    },
+    {
+      "source": "external",
+      "feature": "contract_length",
+      "value": "Annual",
+      "count": 21410
+    },
+    {
+      "source": "external",
+      "feature": "contract_length",
+      "value": "Quarterly",
+      "count": 20834
+    },
+    {
+      "source": "external",
+      "feature": "contract_length",
+      "value": "Monthly",
+      "count": 22130
+    }
+  ],
+  "interpretation": "Observed between-file distribution/conditional differences; no temporal or causal claim"
+}

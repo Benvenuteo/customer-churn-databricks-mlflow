@@ -1,0 +1,452 @@
+{
+  "task": "regression",
+  "target": "total_spend",
+  "features": [
+    "age",
+    "tenure",
+    "usage_frequency",
+    "support_calls",
+    "payment_delay",
+    "last_interaction",
+    "gender",
+    "subscription_type",
+    "contract_length"
+  ],
+  "cv_selection_metric": "RMSE",
+  "cv_sample_rows": 77490,
+  "cv_fraction_requested": 0.25,
+  "folds": 3,
+  "candidates": [
+    {
+      "name": "gbt_depth3",
+      "family": "gbt",
+      "reg_param": 0.1,
+      "elastic_net": 0.0,
+      "depth": 3,
+      "fold_scores": [
+        224.8283787106359,
+        226.83283412605007,
+        225.82153828080146
+      ],
+      "mean": 225.82758370582914,
+      "std": 1.0022413823369283
+    },
+    {
+      "name": "ridge_0.1",
+      "family": "linear",
+      "reg_param": 0.1,
+      "elastic_net": 0.0,
+      "depth": 3,
+      "fold_scores": [
+        231.1086050445264,
+        232.3133691335737,
+        230.91269890112494
+      ],
+      "mean": 231.44489102640833,
+      "std": 0.7584757551990343
+    },
+    {
+      "name": "ols",
+      "family": "linear",
+      "reg_param": 0.0,
+      "elastic_net": 0.0,
+      "depth": 3,
+      "fold_scores": [
+        231.10882146477837,
+        232.31357362163897,
+        230.91233340738273
+      ],
+      "mean": 231.44490949793337,
+      "std": 0.7586731239702005
+    },
+    {
+      "name": "ridge_0.001",
+      "family": "linear",
+      "reg_param": 0.001,
+      "elastic_net": 0.0,
+      "depth": 3,
+      "fold_scores": [
+        231.10881942823846,
+        232.31357170175264,
+        230.91233737619734
+      ],
+      "mean": 231.4449095020628,
+      "std": 0.7586710829279333
+    },
+    {
+      "name": "lasso_0.001",
+      "family": "linear",
+      "reg_param": 0.001,
+      "elastic_net": 1.0,
+      "depth": 3,
+      "fold_scores": [
+        231.10883801806182,
+        232.31354264639594,
+        230.91235254831722
+      ],
+      "mean": 231.44491107092497,
+      "std": 0.7586450061682674
+    },
+    {
+      "name": "elastic_net_0.1",
+      "family": "linear",
+      "reg_param": 0.1,
+      "elastic_net": 0.5,
+      "depth": 3,
+      "fold_scores": [
+        231.10804049793958,
+        232.31271261536537,
+        230.91407723522912
+      ],
+      "mean": 231.44494344951136,
+      "std": 0.7577419948277587
+    },
+    {
+      "name": "lasso_0.1",
+      "family": "linear",
+      "reg_param": 0.1,
+      "elastic_net": 1.0,
+      "depth": 3,
+      "fold_scores": [
+        231.10751486879855,
+        232.31218824743627,
+        230.91554961968282
+      ],
+      "mean": 231.44508424530588,
+      "std": 0.7570433786117673
+    },
+    {
+      "name": "ridge_10",
+      "family": "linear",
+      "reg_param": 10.0,
+      "elastic_net": 0.0,
+      "depth": 3,
+      "fold_scores": [
+        231.09521970891214,
+        232.30079534636994,
+        230.95434680002873
+      ],
+      "mean": 231.45012061843693,
+      "std": 0.7400654793139817
+    },
+    {
+      "name": "lasso_10",
+      "family": "linear",
+      "reg_param": 10.0,
+      "elastic_net": 1.0,
+      "depth": 3,
+      "fold_scores": [
+        231.9224730439301,
+        233.24246194274906,
+        232.25232808432935
+      ],
+      "mean": 232.4724210236695,
+      "std": 0.686966774823838
+    }
+  ],
+  "winner": "gbt_depth3",
+  "full_training_rows": 308582,
+  "threshold": 0.5,
+  "threshold_selection": null,
+  "baseline_training_mean": 631.5926174890272,
+  "evaluations": {
+    "validate": {
+      "model": {
+        "rows": 66125,
+        "mae": 187.26005907543365,
+        "rmse": 225.87484722084437,
+        "r2": 0.11983906992154592
+      },
+      "baseline": {
+        "rows": 66125,
+        "mae": 199.8634846212515,
+        "rmse": 240.76159776322595,
+        "r2": -1.787791618079737e-06
+      },
+      "bootstrap": {
+        "repeats": 0,
+        "intervals": {}
+      },
+      "segments": [
+        {
+          "feature": "gender",
+          "value": "Female",
+          "rows": 28753,
+          "mae": 196.84708381601556,
+          "rmse": 235.3917367856881,
+          "r2": 0.09242485572523584
+        },
+        {
+          "feature": "gender",
+          "value": "Male",
+          "rows": 37372,
+          "mae": 179.88406307934156,
+          "rmse": 218.27055715197756,
+          "r2": 0.1367448003895655
+        },
+        {
+          "feature": "contract_length",
+          "value": "Annual",
+          "rows": 26492,
+          "mae": 178.09532166831607,
+          "rmse": 216.88972162387037,
+          "r2": 0.11575006950607236
+        },
+        {
+          "feature": "contract_length",
+          "value": "Monthly",
+          "rows": 13126,
+          "mae": 223.961204824378,
+          "rmse": 259.32901897186014,
+          "r2": -0.006469202837634969
+        },
+        {
+          "feature": "contract_length",
+          "value": "Quarterly",
+          "rows": 26507,
+          "mae": 178.24557174335962,
+          "rmse": 216.6968413349869,
+          "r2": 0.13174698661530548
+        }
+      ]
+    },
+    "test": {
+      "model": {
+        "rows": 66125,
+        "mae": 186.71323621972138,
+        "rmse": 225.22054832701284,
+        "r2": 0.1207826176310034
+      },
+      "baseline": {
+        "rows": 66125,
+        "mae": 199.22836615387007,
+        "rmse": 240.1927976204847,
+        "r2": -4.69326886021193e-07
+      },
+      "bootstrap": {
+        "repeats": 200,
+        "confidence": 0.95,
+        "method": "Percentile bootstrap of fixed held-out predictions; no training uncertainty",
+        "intervals": {
+          "mae": {
+            "low": 185.68583274469117,
+            "high": 187.44122326085727
+          },
+          "rmse": {
+            "low": 224.1377831888139,
+            "high": 226.04333564937517
+          }
+        }
+      },
+      "segments": [
+        {
+          "feature": "gender",
+          "value": "Female",
+          "rows": 28552,
+          "mae": 195.74194697489034,
+          "rmse": 234.44016905306063,
+          "r2": 0.09815558411262315
+        },
+        {
+          "feature": "gender",
+          "value": "Male",
+          "rows": 37573,
+          "mae": 179.85225228227733,
+          "rmse": 217.95386167504594,
+          "r2": 0.13254823866483523
+        },
+        {
+          "feature": "contract_length",
+          "value": "Annual",
+          "rows": 26519,
+          "mae": 177.6787554413623,
+          "rmse": 216.45503157163486,
+          "r2": 0.12873447936811822
+        },
+        {
+          "feature": "contract_length",
+          "value": "Monthly",
+          "rows": 12933,
+          "mae": 223.38668963724194,
+          "rmse": 258.61854384865063,
+          "r2": -0.0038051671521737163
+        },
+        {
+          "feature": "contract_length",
+          "value": "Quarterly",
+          "rows": 26673,
+          "mae": 177.9136119821969,
+          "rmse": 216.1903817515427,
+          "r2": 0.1255653867540285
+        }
+      ]
+    },
+    "external": {
+      "model": {
+        "rows": 64374,
+        "mae": 229.3361500072055,
+        "rmse": 265.83625589723897,
+        "r2": -0.038414829104549186
+      },
+      "baseline": {
+        "rows": 64374,
+        "mae": 236.63256843219756,
+        "rmse": 276.14741668725316,
+        "r2": -0.12053242398159791
+      },
+      "bootstrap": {
+        "repeats": 200,
+        "confidence": 0.95,
+        "method": "Percentile bootstrap of fixed held-out predictions; no training uncertainty",
+        "intervals": {
+          "mae": {
+            "low": 228.32611301847018,
+            "high": 230.20799743782618
+          },
+          "rmse": {
+            "low": 264.74489017346275,
+            "high": 266.663385919924
+          }
+        }
+      },
+      "segments": [
+        {
+          "feature": "gender",
+          "value": "Female",
+          "rows": 34353,
+          "mae": 229.2836056852312,
+          "rmse": 265.1417055376253,
+          "r2": -0.031539993007780875
+        },
+        {
+          "feature": "gender",
+          "value": "Male",
+          "rows": 30021,
+          "mae": 229.39627642180804,
+          "rmse": 266.6288094769405,
+          "r2": -0.048243156236235984
+        },
+        {
+          "feature": "contract_length",
+          "value": "Annual",
+          "rows": 21410,
+          "mae": 232.48423912524302,
+          "rmse": 270.23133454546877,
+          "r2": -0.06443943024549226
+        },
+        {
+          "feature": "contract_length",
+          "value": "Monthly",
+          "rows": 22130,
+          "mae": 225.29335537362147,
+          "rmse": 259.87199132798213,
+          "r2": -0.003306703708626735
+        },
+        {
+          "feature": "contract_length",
+          "value": "Quarterly",
+          "rows": 20834,
+          "mae": 230.3953060609653,
+          "rmse": 267.54107199807004,
+          "r2": -0.05042139352099606
+        }
+      ]
+    }
+  },
+  "model_details": {
+    "kind": "tree_split_importance_not_causal",
+    "features": [
+      {
+        "name": "age_imputed",
+        "value": 0.19756955852927652
+      },
+      {
+        "name": "tenure_imputed",
+        "value": 0.0007117647857442674
+      },
+      {
+        "name": "usage_frequency_imputed",
+        "value": 0.0022458547652483445
+      },
+      {
+        "name": "support_calls_imputed",
+        "value": 0.3346697949807192
+      },
+      {
+        "name": "payment_delay_imputed",
+        "value": 0.15101978567668634
+      },
+      {
+        "name": "last_interaction_imputed",
+        "value": 0.05958795407149485
+      },
+      {
+        "name": "gender_encoded_Male",
+        "value": 0.06935444497772279
+      },
+      {
+        "name": "gender_encoded_Female",
+        "value": 0.0
+      },
+      {
+        "name": "gender_encoded___unknown",
+        "value": 0.0
+      },
+      {
+        "name": "subscription_type_encoded_Standard",
+        "value": 0.0
+      },
+      {
+        "name": "subscription_type_encoded_Premium",
+        "value": 0.0
+      },
+      {
+        "name": "subscription_type_encoded_Basic",
+        "value": 0.0
+      },
+      {
+        "name": "subscription_type_encoded___unknown",
+        "value": 0.0
+      },
+      {
+        "name": "contract_length_encoded_Annual",
+        "value": 0.0
+      },
+      {
+        "name": "contract_length_encoded_Quarterly",
+        "value": 0.0
+      },
+      {
+        "name": "contract_length_encoded_Monthly",
+        "value": 0.18484084221310756
+      },
+      {
+        "name": "contract_length_encoded___unknown",
+        "value": 0.0
+      }
+    ]
+  },
+  "lineage": {
+    "run_id": "ea7217458e3440a8ac709ae91c971cad",
+    "model_uri": "runs:/ea7217458e3440a8ac709ae91c971cad/model",
+    "registered_model": "customer_study_regression",
+    "version": "1",
+    "alias": "candidate",
+    "native_path": "models/regression",
+    "roundtrip_predictions_equal": true,
+    "signature_input_columns": [
+      "age",
+      "tenure",
+      "usage_frequency",
+      "support_calls",
+      "payment_delay",
+      "last_interaction",
+      "gender",
+      "subscription_type",
+      "contract_length"
+    ],
+    "promotion_policy": "Candidate is not automatically approved for real customer decisions"
+  },
+  "mlflow_run_id": "ea7217458e3440a8ac709ae91c971cad",
+  "seconds": 39.027167469000005
+}

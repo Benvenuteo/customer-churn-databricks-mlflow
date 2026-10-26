@@ -1,0 +1,64 @@
+name: Customer study checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      PYSPARK_SUBMIT_ARGS: --driver-memory 2g pyspark-shell
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pip install --no-deps -e .
+      - run: ruff check . && ruff format --check .
+      - run: pytest -q
+      - name: Exercise complete MLflow save, reload, registry and report
+        run: |
+          churn demo --rows 400
+          churn run --training data/demo/development.csv --external data/demo/external.csv --output outputs/ci --run-id ci --data-kind synthetic --profile smoke
+          churn score --input data/demo/external.csv --model outputs/ci/models/classification --task classification --output outputs/scored
+      - run: python -m build --wheel
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: synthetic-smoke-results
+          path: |
+            outputs/ci/report/
+            outputs/ci/*.json
+            dist/*.whl
+
+  container:
+    name: Docker build and pipeline smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the distributable image
+        run: docker build --tag customer-study:ci .
+      - name: Exercise the installed package as the container user
+        run: |
+          docker run --rm \
+            --env 'PYSPARK_SUBMIT_ARGS=--driver-memory 2g pyspark-shell' \
+            customer-study:ci sh -ec '
+              churn demo --rows 200
+              churn run --training data/demo/development.csv --external data/demo/external.csv --output outputs/container --run-id container --data-kind synthetic --profile smoke
+              churn score --input data/demo/external.csv --model outputs/container/models/classification --task classification --output outputs/scored
+            '
